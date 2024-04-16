@@ -1,0 +1,19 @@
+M/G/1 queue:
+
+1 - rho * np.heaviside(Q_D[i - 1], 0.5) represents the probability that the server is not idle. 
+
+If the queue is non-empty (Q_D[i - 1] >= 0.5), this probability is 1; otherwise, it is 1 - rho (the probability that the server is idle in an M/D/1 queue).
+
+mu_service * (1 - rho * np.heaviside(Q_D[i - 1], 0.5)) represents the number of customers served during the current time step.
+
+So, the equation Q_D[i] = Q_D[i - 1] + dt * (lambda_arrival - mu_service * (1 - rho * np.heaviside(Q_D[i - 1], 0.5))) updates the queue length by adding the number of arrivals during the current time step (dt * lambda_arrival) and subtracting the number of customers served during the current time step (mu_service * (1 - rho * np.heaviside(Q_D[i - 1], 0.5))).
+
+M/M/1 queue:
+
+np.exp(-Q_M[i - 1]) represents the probability that the server is idle in an M/M/1 queue with Q_M[i - 1] customers in the queue.
+
+1 - rho * np.exp(-Q_M[i - 1]) represents the probability that the server is not idle in an M/M/1 queue.
+
+mu_service * (1 - rho * np.exp(-Q_M[i - 1])) represents the number of customers served during the current time step.
+
+The rest of the equation is the same as for the M/D/1 queue: Q_M[i] = Q_M[i - 1] + dt * (lambda_arrival - mu_service * (1 - rho * np.exp(-Q_M[i - 1]))) updates the queue length by adding the number of arrivals and subtracting the number of customers served during the current time step.

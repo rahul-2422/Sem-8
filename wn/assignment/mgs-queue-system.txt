@@ -1,0 +1,7 @@
+Toll Booths:
+
+Arrivals of vehicles at toll booths follow a Poisson process (M).
+
+Service times for processing vehicles can have a general distribution (G), such as a Weibull distribution, due to variations in payment methods and traffic flow.
+
+Multiple toll booths or servers (S) are available to serve vehicles.

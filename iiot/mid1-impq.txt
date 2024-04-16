@@ -1,0 +1,12 @@
+- [ ]  IoT vs IIoT
+- [ ]  IoT Enabling Technologies
+- [ ]  Predecessors of IoT
+- [ ]  Industrial Sensors & Actuators
+- [ ]  Federated Learning
+- [ ]  Mathematical Model of Federated Learning
+- [ ]  Centralized vs Distributed Learning
+- [ ]  Supervised vs Unsupervised vs Reinforcement Learning
+
+
+
+
